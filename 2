@@ -1,0 +1,48 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+    vector<int> numeros;
+    vector<int> unicos;
+
+    int num;
+
+    cout << "Ingrese numeros (0 para terminar):";
+
+    while(true) {
+
+        cin >> num;
+
+        if(num == 0) {
+            break;
+        }
+
+        numeros.push_back(num);
+    }
+
+    for(int i = 0; i < numeros.size(); i++) {
+
+        bool repetido = false;
+
+        for(int j = 0; j < unicos.size(); j++) {
+
+            if(numeros[i] == unicos[j]) {
+                repetido = true;
+            }
+        }
+
+        if(repetido == false) {
+            unicos.push_back(numeros[i]);
+        }
+    }
+
+    cout << "Elementos unicos:";
+
+    for(int n : unicos) {
+        cout << n << " ";
+    }
+
+    return 0;
+}
