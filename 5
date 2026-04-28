@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+
+    vector<double> precios = {1000, 2500, 3200, 1500};
+
+    for(int i = 0; i < precios.size(); i++) {
+
+        precios[i] = precios[i] * 0.90;
+    }
+
+    if(precios.empty()) {
+
+        cout << "La lista esta vacia";
+    }
+    else {
+
+        cout << "Precios finales:";
+
+        for(double p : precios) {
+
+            cout << p << " ";
+        }
+    }
+
+    return 0;
+}
