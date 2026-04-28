@@ -1,0 +1,16 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> numeros;
+    numeros.push_back(10);
+    numeros.push_back(20);
+    numeros.push_back(30);
+
+    cout << "Cantidad: " << numeros.size() << endl;
+
+    numeros.pop_back();
+    cout << "Nueva cantidad: " << numeros.size() << endl;
+    return 0;
+}
